@@ -63,14 +63,12 @@ In the project directory, you can run:
 6. Animations: Hover over buttons or the filter dropdown to see opacity animations; task additions/removals include fade and slide effects.
 
 ## Project Structure
-src/
-├── components/
-│ ├── Button.jsx # Reusable button with opacity animation
-│ ├── TodoList.jsx # Main to-do list component with task management and filter
-├── styles/
-│ ├── App.css # Styles for buttons, dropdown, and task list
-├── App.js # Main app component
-├── index.js # Entry point
+
+* src/components/Button.jsx: Reusable button with opacity animation.
+* src/components/TodoList.jsx: Main component for task management.
+* src/styles/App.css: Styles for buttons, dropdown, and task list.
+* src/App.js: Main app component.
+* src/index.js: Entry point.
 
 ## Contributing
 Contributions are welcome! To contribute:
