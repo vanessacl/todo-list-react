@@ -1,0 +1,229 @@
+@import 'variables';
+@import 'mixins';
+
+
+.app {
+  font-family: $font-family;
+  min-height: 100vh;
+  background: $background-gradient;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  color: #1f2937; // Gray-800
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.todo-list {
+  width: 100%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1.5rem;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+
+  h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: $primary-color;
+  }
+}
+
+.input-container {
+  display: flex;
+  margin-bottom: 1rem;
+
+  .task-input {
+    flex: 1;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #d1d5db; // Gray-300
+    border-radius: $border-radius;
+    font-family: $font-family;
+    transition: $transition;
+
+    &:focus {
+      outline: none;
+      border-color: $primary-color;
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+    }
+  }
+}
+
+.filter-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+
+  .filter-label {
+    font-size: 1rem;
+    margin-right: 0.75rem;
+    color: #4b5563; // Gray-600
+  }
+
+  .custom-select-wrapper{ 
+    position: relative;
+    display: inline-block;
+  
+    .filter-select {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      padding: 8px 24px 8px 12px; //space for the icon
+      font-size: 1rem;
+      border-radius: $border-radius;
+      border: 1px solid #d1d5db;
+      background: #ffffff;
+      cursor: pointer;
+      font-family: $font-family;
+      transition: $transition;
+
+      &:focus {
+        outline: none;
+        border-color: $primary-color;
+        box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+      } 
+    }
+
+    .custom-select-icon {
+      position:absolute; 
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none; // Prevents the icon from capturing mouse events
+      color: #333; // Gray-500
+    }
+  }  
+}
+
+.task-input,
+.edit-input {
+  padding:8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.75rem 0;
+  padding: 0.75rem;
+  background: #ffffff;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  transition: $transition;
+
+  &:hover {
+    background: #f1f1f1;
+  }
+
+  .task-text {
+    flex: 1;
+    font-size: 1rem;
+    color: #1f2937;
+
+    &.completed {
+      text-decoration: line-through;
+      color: #6b7280; // Gray-500
+    }
+  }
+
+  .task-actions {
+    display: flex;
+    gap: 0.5rem;
+  }
+}
+
+.edit-container {
+  display: flex;
+  flex: 1;
+  gap: 0.5rem;
+
+  .edit-input {
+    flex: 1;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: $border-radius;
+    font-family: $font-family;
+    transition: $transition;
+
+    &:focus {
+      outline: none;
+      border-color: $primary-color;
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+    }
+  }
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-family: $font-family;
+  border: none;
+  border-radius: $border-radius;
+  cursor: pointer;
+  transition: $transition;
+  @include button-hover;
+
+  &.add-button {
+    background: $secondary-color;
+  }
+
+  &.complete-button {
+    background: $success-color;
+  }
+
+  &.complete-button.completed {
+    background: $warning-color;
+  }
+
+  &.edit-button, &.save-button {
+    background: $primary-color;
+  }
+
+  &.delete-button, &.cancel-button {
+    background: $danger-color;
+  }
+
+  &.clear-all-button {
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background: $danger-color;
+  }
+}
+
+.counter {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  text-align: center;
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $primary-color;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: #4b5563;
+  }
+}

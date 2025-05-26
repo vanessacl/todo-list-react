@@ -1,0 +1,209 @@
+.app {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #a5b4fc, #e879f9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  color: #1f2937;
+}
+.app h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.todo-list {
+  width: 100%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.todo-list h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #000000;
+}
+
+.input-container {
+  display: flex;
+  margin-bottom: 1rem;
+}
+.input-container .task-input {
+  flex: 1;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+}
+.input-container .task-input:focus {
+  outline: none;
+  border-color: #000000;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+.filter-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.filter-container .filter-label {
+  font-size: 1rem;
+  margin-right: 0.75rem;
+  color: #4b5563;
+}
+.filter-container .custom-select-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.filter-container .custom-select-wrapper .filter-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 8px 24px 8px 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+}
+.filter-container .custom-select-wrapper .filter-select:focus {
+  outline: none;
+  border-color: #000000;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+.filter-container .custom-select-wrapper .custom-select-icon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #333;
+}
+
+.task-input,
+.edit-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.75rem 0;
+  padding: 0.75rem;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+.task-item:hover {
+  background: #f1f1f1;
+}
+.task-item .task-text {
+  flex: 1;
+  font-size: 1rem;
+  color: #1f2937;
+}
+.task-item .task-text.completed {
+  text-decoration: line-through;
+  color: #6b7280;
+}
+.task-item .task-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.edit-container {
+  display: flex;
+  flex: 1;
+  gap: 0.5rem;
+}
+.edit-container .edit-input {
+  flex: 1;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+}
+.edit-container .edit-input:focus {
+  outline: none;
+  border-color: #000000;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+.button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.button.add-button {
+  background: #14b8a6;
+}
+.button.complete-button {
+  background: #22c55e;
+}
+.button.complete-button.completed {
+  background: #f97316;
+}
+.button.edit-button, .button.save-button {
+  background: #000000;
+}
+.button.delete-button, .button.cancel-button {
+  background: #f43f5e;
+}
+.button.clear-all-button {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #f43f5e;
+}
+
+.counter {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.counter h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 0.5rem;
+}
+.counter p {
+  font-size: 1.2rem;
+  color: #4b5563;
+}/*# sourceMappingURL=App.css.map */
