@@ -2,6 +2,11 @@
 
 A simple and interactive to-do list application built with React, featuring task management, filtering, editing, and smooth animations. Deployed live at https://todolistreact-2025.netlify.app/.
 
+<p align="center">
+  <img src="src/images/todo-list-screenshot.png" width= "450">
+</p>
+
+
 ## Overview
 This project was bootstrapped with Create React App and enhanced with @react spring/web for animations and Font Awesome for custom icons.
 
@@ -23,7 +28,7 @@ This project was bootstrapped with Create React App and enhanced with @react spr
 * Netlify: Hosting for the live deployment.
 
 ## Demo
-Try the live app at https://todolistreact-2025.netlify.app/. Add, edit, delete, and filter tasks with smooth animations.
+Try the live app at [here](https://todolistreact-2025.netlify.app/). Add, edit, delete, and filter tasks with smooth animations.
 
 ## Getting Started
 ### Prerequisites
@@ -39,7 +44,7 @@ Try the live app at https://todolistreact-2025.netlify.app/. Add, edit, delete, 
    npm install
 
 3. Install additional dependencies:
-   npm install @react spring/web @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome
+   npm install @react-spring/web @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome
 
 ## Available Scripts
 ### Development
