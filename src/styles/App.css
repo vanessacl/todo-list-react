@@ -35,6 +35,14 @@
   display: flex;
   margin-bottom: 1rem;
 }
+@media screen and (max-width: 400px) {
+  .input-container {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 16px;
+    width: 100%;
+  }
+}
 .input-container .task-input {
   flex: 1;
   padding: 0.75rem;
@@ -48,6 +56,11 @@
   outline: none;
   border-color: #000000;
   box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+@media screen and (max-width: 400px) {
+  .input-container .task-input {
+    width: 100%;
+  }
 }
 
 .filter-container {
@@ -74,6 +87,7 @@
   border-radius: 8px;
   border: 1px solid #d1d5db;
   background: #ffffff;
+  color: #020202;
   cursor: pointer;
   font-family: "Poppins", sans-serif;
   transition: all 0.3s ease;
@@ -103,8 +117,12 @@
   list-style: none;
   padding: 0;
 }
-
-.task-item {
+@media screen and (max-width: 400px) {
+  .task-list {
+    width: 100%;
+  }
+}
+.task-list .task-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -115,29 +133,61 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
-.task-item:hover {
+.task-list .task-item:hover {
   background: #f1f1f1;
 }
-.task-item .task-text {
+@media screen and (max-width: 400px) {
+  .task-list .task-item {
+    flex-direction: column;
+    row-gap: 8px;
+  }
+}
+.task-list .task-item .task-text {
   flex: 1;
   font-size: 1rem;
   color: #1f2937;
 }
-.task-item .task-text.completed {
+@media screen and (max-width: 400px) {
+  .task-list .task-item .task-text {
+    width: 100%;
+    background-color: #e9e6e6;
+    border-radius: 4px;
+    padding: 8px;
+    display: block;
+  }
+}
+.task-list .task-item .task-text.completed {
   text-decoration: line-through;
   color: #6b7280;
 }
-.task-item .task-actions {
+.task-list .task-item .task-actions {
   display: flex;
   gap: 0.5rem;
 }
-
-.edit-container {
+@media screen and (max-width: 400px) {
+  .task-list .task-item .task-actions {
+    width: 100%;
+    justify-content: center;
+    margin-top: 8px;
+  }
+}
+.task-list .task-item .edit-container {
   display: flex;
   flex: 1;
   gap: 0.5rem;
 }
-.edit-container .edit-input {
+@media screen and (max-width: 400px) {
+  .task-list .task-item .edit-container {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 8px;
+  }
+  .task-list .task-item .edit-container .button {
+    width: 45%;
+  }
+}
+.task-list .task-item .edit-container .edit-input {
   flex: 1;
   padding: 0.5rem;
   font-size: 1rem;
@@ -146,16 +196,24 @@
   font-family: "Poppins", sans-serif;
   transition: all 0.3s ease;
 }
-.edit-container .edit-input:focus {
+.task-list .task-item .edit-container .edit-input:focus {
   outline: none;
   border-color: #000000;
   box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+@media screen and (max-width: 400px) {
+  .task-list .task-item .edit-container .edit-input {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+  }
 }
 
 .button {
   padding: 0.5rem 1rem;
   font-size: 1rem;
   font-family: "Poppins", sans-serif;
+  color: #020202;
+  text-align: center;
   border: none;
   border-radius: 8px;
   cursor: pointer;
